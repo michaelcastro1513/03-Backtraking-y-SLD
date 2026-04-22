@@ -1,0 +1,18 @@
+Este repositorio contiene la solución técnica a la actividad de grafos
+
+Michael Steven Castro Duque
+
+Consulta: "arco(saskatoon, vancouver, _)."  
+Resultado: No  
+Análisis: El grafo es dirigido y no existen aristas que permitan el retorno hacia Vancouver desde Saskatoon
+
+Consulta: "arco(regina, Destino, Costo)." 
+Resultados:Hacia "Saskatoon" Costo 7  
+Hacia "Winnipeg" Costo 4
+
+Consulta:"conectado(edmonton, calgary)." 
+Resultado:Si  
+
+reglas:
+1 "Deteccinn de aristas" Determina si un nodo tiene conexiones de salida
+2 "Costo con intermediario" Calcula el peso total entre dos nodos pasando por un punto especifico
