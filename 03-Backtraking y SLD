@@ -1,0 +1,22 @@
+arco(vancouver, edmonton, 16).
+arco(vancouver, calgary, 13).
+arco(calgary, edmonton, 4).
+arco(edmonton, saskatoon, 12).
+arco(saskatoon, calgary, 9).
+arco(saskatoon, winnipeg, 20).
+arco(calgary, regina, 14).
+arco(regina, saskatoon, 7).
+arco(regina, winnipeg, 4).
+
+tiene_aristas(X) :-
+arco(X, _, _).
+costo_viaje(X, Y, Z, costoTotal) :-
+arco(X, Y, C1),
+arco(X, Y, C2),
+costoTotal is C1 + C2.
+
+conectado(X, Y) :-
+arco(X, Y, _).
+conectado(X, Y) :-
+arco(X, Y, _),
+conectado (Z, Y).
